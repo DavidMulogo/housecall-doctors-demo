@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 
 import {
   ArrowRight,
@@ -248,7 +248,7 @@ export default function Home() {
 
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 md:text-xl">
               Professional medical care delivered directly to your hotel,
-              villa or residence â€” anywhere in Zanzibar.
+              villa or residence — anywhere in Zanzibar.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -914,7 +914,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 flex flex-col gap-3 border-t border-slate-200 pt-7 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-            <p>Â© 2026 House Call Doctors Zanzibar.</p>
+            <p>© 2026 House Call Doctors Zanzibar.</p>
 
             <div className="flex items-center gap-2">
               <CheckCircle2 size={15} className="text-teal-600" />
