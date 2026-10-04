@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 import {
   ArrowRight,
@@ -19,6 +19,8 @@ import {
   Stethoscope,
   Video,
 } from "lucide-react";
+
+import MobileMenu from "@/components/MobileMenu";
 
 export default function Home() {
   const services = [
@@ -131,6 +133,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2 text-xs sm:px-6 sm:text-sm lg:px-8">
           <div className="flex items-center gap-2 font-medium">
             <Clock3 size={15} className="shrink-0" />
+
             <span>24/7 Tourist Medical Assistance in Zanzibar</span>
           </div>
 
@@ -157,6 +160,7 @@ export default function Home() {
       {/* NAVBAR */}
       <header className="relative z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
+          {/* BRAND */}
           <a href="#" className="flex min-w-0 items-center gap-3">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-teal-600 text-white shadow-sm">
               <Stethoscope size={24} strokeWidth={2.4} />
@@ -173,6 +177,7 @@ export default function Home() {
             </div>
           </a>
 
+          {/* DESKTOP NAVIGATION */}
           <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 lg:flex">
             <a href="#services" className="transition hover:text-teal-600">
               Services
@@ -202,16 +207,20 @@ export default function Home() {
             </a>
           </nav>
 
-          <a
-            href="https://wa.me/255629227983"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-3 flex shrink-0 items-center gap-2 rounded-full bg-teal-600 px-4 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-teal-700 hover:shadow-lg sm:px-5"
-          >
-            <MessageCircle size={17} />
+          {/* RIGHT ACTIONS */}
+          <div className="ml-3 flex shrink-0 items-center gap-2">
+            <a
+              href="https://wa.me/255629227983"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden items-center gap-2 rounded-full bg-teal-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-teal-700 hover:shadow-lg sm:flex"
+            >
+              <MessageCircle size={17} />
+              Get a Doctor
+            </a>
 
-            <span className="hidden sm:inline">Get a Doctor</span>
-          </a>
+            <MobileMenu />
+          </div>
         </div>
       </header>
 
@@ -222,10 +231,11 @@ export default function Home() {
         <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-cyan-100/60 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 md:py-16 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-24">
-          {/* LEFT */}
+          {/* HERO LEFT */}
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-200 bg-white px-4 py-2 text-sm font-semibold text-teal-700 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
+
               Doctors available 24/7
             </div>
 
@@ -238,7 +248,7 @@ export default function Home() {
 
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 md:text-xl">
               Professional medical care delivered directly to your hotel,
-              villa or residence — anywhere in Zanzibar.
+              villa or residence â€” anywhere in Zanzibar.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -330,7 +340,7 @@ export default function Home() {
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
 
                 <p className="font-bold text-[#073B4C]">
-                  24 hours · 7 days
+                  24 hours Â· 7 days
                 </p>
               </div>
             </div>
@@ -445,7 +455,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY HCD */}
+      {/* WHY HOUSE CALL DOCTORS */}
       <section id="about" className="bg-[#073B4C] text-white">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 sm:px-6 md:py-24 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <div>
@@ -663,7 +673,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* INSURANCE LOGOS */}
+          {/* INSURANCE PARTNERS */}
           <div className="mt-14">
             <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
               <div>
@@ -742,17 +752,17 @@ export default function Home() {
 
                 <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {paymentMethods.map((method) => (
-  <div
-    key={method.name}
-    className="flex min-h-20 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-4 shadow-sm"
-  >
-    <img
-      src={method.src}
-      alt={method.name}
-      className="h-9 max-w-[120px] object-contain"
-    />
-  </div>
-))}
+                    <div
+                      key={method.name}
+                      className="flex min-h-20 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-4 shadow-sm"
+                    >
+                      <img
+                        src={method.src}
+                        alt={method.name}
+                        className="h-9 max-w-[120px] object-contain"
+                      />
+                    </div>
+                  ))}
                 </div>
 
                 <p className="mt-5 text-sm leading-6 text-slate-500">
@@ -770,11 +780,13 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 md:py-24 lg:px-8">
           <div className="relative overflow-hidden rounded-[2.5rem] bg-[#073B4C] px-5 py-14 text-center text-white shadow-2xl sm:px-8 md:px-12 md:py-20">
             <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-teal-400/10 blur-3xl" />
+
             <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl" />
 
             <div className="relative mx-auto max-w-3xl">
               <div className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-bold text-teal-200">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
+
                 Available 24 hours a day
               </div>
 
@@ -889,6 +901,7 @@ export default function Home() {
                   className="flex items-start gap-2 break-all hover:text-teal-600"
                 >
                   <Mail size={15} className="mt-0.5 shrink-0" />
+
                   info@housecalldoctorsznz.co.tz
                 </a>
 
@@ -901,17 +914,18 @@ export default function Home() {
           </div>
 
           <div className="mt-12 flex flex-col gap-3 border-t border-slate-200 pt-7 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-            <p>© 2026 House Call Doctors Zanzibar.</p>
+            <p>Â© 2026 House Call Doctors Zanzibar.</p>
 
             <div className="flex items-center gap-2">
               <CheckCircle2 size={15} className="text-teal-600" />
+
               24/7 Tourist Medical Assistance
             </div>
           </div>
         </div>
       </footer>
 
-            {/* FLOATING WHATSAPP */}
+      {/* FLOATING WHATSAPP */}
       <a
         href="https://wa.me/255629227983"
         target="_blank"
@@ -928,3 +942,4 @@ export default function Home() {
     </main>
   );
 }
+
