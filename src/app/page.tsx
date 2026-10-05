@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 import {
   ArrowRight,
@@ -149,7 +149,7 @@ export default function Home() {
           <a href="#" className="flex min-w-0 items-center gap-3">
             <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm">
               <Image
-                src="/housecall-logo.jpg"
+                src="/housecall-logo.jpeg"
                 alt="House Call Doctors Zanzibar logo"
                 fill
                 className="object-cover"
@@ -782,7 +782,7 @@ export default function Home() {
               <div className="flex items-center gap-3">
                 <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm">
                   <Image
-                    src="/housecall-logo.jpg"
+                    src="/housecall-logo.jpeg"
                     alt="House Call Doctors Zanzibar logo"
                     fill
                     className="object-cover"

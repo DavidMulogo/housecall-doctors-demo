@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -63,7 +63,7 @@ export default function MobileMenu() {
           <div className="flex items-center gap-3">
             <div className="relative h-12 w-12 overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm">
               <Image
-                src="/housecall-logo.jpg"
+                src="/housecall-logo.jpeg"
                 alt="House Call Doctors Zanzibar logo"
                 fill
                 className="object-cover"
@@ -105,7 +105,7 @@ export default function MobileMenu() {
                 className="flex items-center justify-between border-b border-slate-100 py-4 text-[17px] font-bold text-[#111111] transition hover:text-[#0A6B2E]"
               >
                 {link.label}
-                <span className="text-[#0A6B2E]">→</span>
+                <span className="text-[#0A6B2E]">â†’</span>
               </a>
             ))}
           </nav>
