@@ -9,6 +9,8 @@ import {
   X,
 } from "lucide-react";
 
+import RequestDoctor from "@/components/RequestDoctor";
+
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
 
@@ -35,7 +37,6 @@ export default function MobileMenu() {
 
   return (
     <>
-      {/* HAMBURGER */}
       <button
         type="button"
         onClick={() => setOpen(true)}
@@ -45,7 +46,6 @@ export default function MobileMenu() {
         <Menu size={22} />
       </button>
 
-      {/* DARK OVERLAY */}
       <div
         onClick={closeMenu}
         className={`fixed inset-0 z-[200] bg-black/60 transition-opacity duration-300 lg:hidden ${
@@ -55,7 +55,6 @@ export default function MobileMenu() {
         }`}
       />
 
-      {/* SOLID MENU DRAWER */}
       <aside
         style={{ backgroundColor: "#ffffff" }}
         className={`fixed right-0 top-0 z-[300] flex h-dvh w-[88%] max-w-[390px] flex-col border-l border-slate-200 bg-white shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
@@ -90,16 +89,12 @@ export default function MobileMenu() {
           </button>
         </div>
 
-        {/* SCROLLABLE BODY */}
-        <div
-          style={{ backgroundColor: "#ffffff" }}
-          className="flex-1 overflow-y-auto bg-white px-5 py-6"
-        >
+        {/* BODY */}
+        <div className="flex-1 overflow-y-auto bg-white px-5 py-6">
           <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.2em] text-slate-400">
             Explore
           </p>
 
-          {/* LINKS */}
           <nav className="flex flex-col">
             {links.map((link) => (
               <a
@@ -109,13 +104,11 @@ export default function MobileMenu() {
                 className="flex items-center justify-between border-b border-slate-100 py-4 text-[17px] font-bold text-[#073B4C] transition hover:text-teal-600"
               >
                 {link.label}
-
                 <span className="text-teal-600">→</span>
               </a>
             ))}
           </nav>
 
-          {/* MEDICAL HELP CARD */}
           <div className="mt-7 rounded-[1.5rem] bg-[#F2FAF9] p-5">
             <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-teal-100 text-teal-700">
               <Stethoscope size={21} />
@@ -130,17 +123,22 @@ export default function MobileMenu() {
             </p>
 
             <p className="mt-2 text-sm leading-6 text-slate-600">
-              Contact House Call Doctors for assistance at your hotel,
-              villa or residence.
+              Request a doctor to your hotel, villa or residence.
             </p>
           </div>
 
-          {/* BUTTONS */}
           <div className="mt-6 flex flex-col gap-3">
+            <div onClick={closeMenu}>
+              <RequestDoctor
+                label="Request a Doctor"
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#073B4C] px-5 py-4 font-extrabold text-white shadow-sm"
+              />
+            </div>
+
             <a
               href="tel:+255629227983"
               onClick={closeMenu}
-              className="flex items-center justify-center gap-2 rounded-full bg-[#073B4C] px-5 py-4 font-extrabold text-white shadow-sm"
+              className="flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-4 font-extrabold text-[#073B4C]"
             >
               <Phone size={18} />
               Call a Doctor
@@ -159,7 +157,6 @@ export default function MobileMenu() {
           </div>
         </div>
 
-        {/* FOOTER */}
         <div className="shrink-0 border-t border-slate-200 bg-white px-5 py-4 text-center text-xs font-medium text-slate-400">
           24/7 Tourist Medical Assistance
         </div>

@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 
 import MobileMenu from "@/components/MobileMenu";
+import RequestDoctor from "@/components/RequestDoctor";
 
 export default function Home() {
   const services = [
@@ -209,15 +210,10 @@ export default function Home() {
 
           {/* RIGHT ACTIONS */}
           <div className="ml-3 flex shrink-0 items-center gap-2">
-            <a
-              href="https://wa.me/255629227983"
-              target="_blank"
-              rel="noreferrer"
+            <RequestDoctor
+              label="Get a Doctor"
               className="hidden items-center gap-2 rounded-full bg-teal-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-teal-700 hover:shadow-lg sm:flex"
-            >
-              <MessageCircle size={17} />
-              Get a Doctor
-            </a>
+            />
 
             <MobileMenu />
           </div>
@@ -231,7 +227,7 @@ export default function Home() {
         <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-cyan-100/60 blur-3xl" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 md:py-16 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-24">
-          {/* HERO LEFT */}
+          {/* LEFT */}
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-200 bg-white px-4 py-2 text-sm font-semibold text-teal-700 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
@@ -248,17 +244,15 @@ export default function Home() {
 
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 md:text-xl">
               Professional medical care delivered directly to your hotel,
-              villa or residence — anywhere in Zanzibar.
+              villa or residence {"\u2014"} anywhere in Zanzibar.
             </p>
 
+            {/* HERO ACTIONS */}
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="tel:+255629227983"
+              <RequestDoctor
+                label="Request a Doctor"
                 className="flex items-center justify-center gap-2 rounded-full bg-[#073B4C] px-7 py-4 text-base font-bold text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#0A4B60]"
-              >
-                <Phone size={19} />
-                Call a Doctor Now
-              </a>
+              />
 
               <a
                 href="https://wa.me/255629227983"
@@ -271,6 +265,7 @@ export default function Home() {
               </a>
             </div>
 
+            {/* TRUST ROW */}
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-slate-200 pt-7 text-sm font-semibold text-slate-600">
               <span className="flex items-center gap-2">
                 <Check size={17} className="text-teal-600" />
@@ -331,6 +326,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* AVAILABILITY CARD */}
             <div className="absolute -left-5 top-8 hidden rounded-2xl border border-white bg-white px-5 py-4 shadow-xl md:block">
               <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                 Availability
@@ -340,7 +336,7 @@ export default function Home() {
                 <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
 
                 <p className="font-bold text-[#073B4C]">
-                  24 hours Â· 7 days
+                  24 hours · 7 days
                 </p>
               </div>
             </div>
@@ -395,6 +391,7 @@ export default function Home() {
           </div>
 
           <div className="mt-14 grid gap-6 md:mt-16 md:grid-cols-3">
+            {/* STEP 1 */}
             <div className="rounded-[2rem] border border-slate-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
                 <MessageCircle size={25} />
@@ -409,11 +406,12 @@ export default function Home() {
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">
-                Call or WhatsApp us and tell us where you are and what kind of
-                medical assistance you need.
+                Call, WhatsApp or use the doctor request form to tell us where
+                you are and the medical assistance you need.
               </p>
             </div>
 
+            {/* STEP 2 */}
             <div className="rounded-[2rem] border border-slate-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
                 <Navigation size={25} />
@@ -433,6 +431,7 @@ export default function Home() {
               </p>
             </div>
 
+            {/* STEP 3 */}
             <div className="rounded-[2rem] border border-slate-100 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
                 <Stethoscope size={25} />
@@ -458,6 +457,7 @@ export default function Home() {
       {/* WHY HOUSE CALL DOCTORS */}
       <section id="about" className="bg-[#073B4C] text-white">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 sm:px-6 md:py-24 lg:grid-cols-2 lg:gap-16 lg:px-8">
+          {/* LEFT */}
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-300">
               Why House Call Doctors
@@ -487,17 +487,15 @@ export default function Home() {
               ))}
             </div>
 
-            <a
-              href="https://wa.me/255629227983"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-10 inline-flex items-center gap-2 rounded-full bg-teal-500 px-7 py-4 font-bold text-white shadow-lg transition hover:-translate-y-1 hover:bg-teal-400"
-            >
-              <MessageCircle size={19} />
-              Get Medical Assistance
-            </a>
+            <div className="mt-10">
+              <RequestDoctor
+                label="Request Medical Assistance"
+                className="inline-flex items-center gap-2 rounded-full bg-teal-500 px-7 py-4 font-bold text-white shadow-lg transition hover:-translate-y-1 hover:bg-teal-400"
+              />
+            </div>
           </div>
 
+          {/* RIGHT */}
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-4 sm:p-6">
             <div className="rounded-[1.7rem] bg-white p-6 text-slate-900 sm:p-8">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-600">
@@ -634,7 +632,9 @@ export default function Home() {
 
                 <h3
                   className={`text-xl font-extrabold ${
-                    location.featured ? "text-white" : "text-[#073B4C]"
+                    location.featured
+                      ? "text-white"
+                      : "text-[#073B4C]"
                   }`}
                 >
                   {location.name}
@@ -715,6 +715,7 @@ export default function Home() {
           {/* PAYMENT PANEL */}
           <div className="mt-8 rounded-[2rem] border border-slate-100 bg-white p-6 shadow-sm sm:p-8 md:p-10">
             <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+              {/* INSURANCE INFO */}
               <div>
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
                   <ShieldCheck size={23} />
@@ -731,7 +732,7 @@ export default function Home() {
                 </p>
 
                 <a
-                  href="https://wa.me/255629227983"
+                  href="https://wa.me/255629227983?text=Hello%20House%20Call%20Doctors%2C%20I%20would%20like%20to%20confirm%20whether%20my%20insurance%20is%20accepted."
                   target="_blank"
                   rel="noreferrer"
                   className="mt-6 inline-flex items-center gap-2 font-bold text-teal-600 transition hover:text-teal-700"
@@ -741,6 +742,7 @@ export default function Home() {
                 </a>
               </div>
 
+              {/* CARDS */}
               <div className="lg:border-l lg:border-slate-200 lg:pl-10">
                 <div className="flex items-center gap-3">
                   <CreditCard size={21} className="text-teal-600" />
@@ -804,12 +806,17 @@ export default function Home() {
               </p>
 
               <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                <RequestDoctor
+                  label="Request a Doctor"
+                  className="flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-extrabold text-[#073B4C] shadow-lg transition hover:-translate-y-1"
+                />
+
                 <a
                   href="tel:+255629227983"
-                  className="flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-extrabold text-[#073B4C] shadow-lg transition hover:-translate-y-1"
+                  className="flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-8 py-4 font-extrabold text-white transition hover:-translate-y-1 hover:bg-white/15"
                 >
                   <Phone size={19} />
-                  Call +255 629 227 983
+                  Call Now
                 </a>
 
                 <a
@@ -819,7 +826,7 @@ export default function Home() {
                   className="flex items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-4 font-extrabold text-white shadow-lg transition hover:-translate-y-1 hover:bg-teal-400"
                 >
                   <MessageCircle size={19} />
-                  WhatsApp 24/7
+                  WhatsApp
                 </a>
               </div>
             </div>
@@ -831,6 +838,7 @@ export default function Home() {
       <footer className="border-t border-slate-100 bg-[#F7FBFB] pb-20 sm:pb-0">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8">
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            {/* BRAND */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-teal-600 text-white">
@@ -854,6 +862,7 @@ export default function Home() {
               </p>
             </div>
 
+            {/* LINKS */}
             <div>
               <h3 className="font-extrabold text-[#073B4C]">
                 Quick Links
@@ -882,6 +891,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* CONTACT */}
             <div>
               <h3 className="font-extrabold text-[#073B4C]">
                 Contact
@@ -914,7 +924,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 flex flex-col gap-3 border-t border-slate-200 pt-7 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-            <p>© 2026 House Call Doctors Zanzibar.</p>
+            <p>&copy; 2026 House Call Doctors Zanzibar.</p>
 
             <div className="flex items-center gap-2">
               <CheckCircle2 size={15} className="text-teal-600" />
@@ -942,4 +952,3 @@ export default function Home() {
     </main>
   );
 }
-
