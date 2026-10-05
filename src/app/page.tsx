@@ -152,7 +152,7 @@ export default function Home() {
                 src="/housecall-logo.jpeg"
                 alt="House Call Doctors Zanzibar logo"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
 
